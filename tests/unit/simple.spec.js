@@ -57,7 +57,6 @@ describe('RequiredTextField.vue', () => {
   it('should show warning when no input passed - method 2', async () => {
     const wrapper = factory({});
     // expect(wrapper.html()).toMatchSnapshot();
-    console.log(wrapper.html());
     const rule = wrapper.vm.$data.requiredRules[0];
     const ruleResult = rule('');
     expect(ruleResult).toBe('Name is required');
