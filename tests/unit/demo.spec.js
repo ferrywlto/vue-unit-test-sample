@@ -22,24 +22,25 @@ describe('CustomCard.vue', () => {
     vuetify = new Vuetify()
   })
 
-  // it('should have a custom title and match snapshot', () => {
-  //   const wrapper = mount(CustomCard, {
-  //     localVue,
-  //     vuetify,
-  //     propsData: {
-  //       title: 'Foobar',
-  //     },
-  //   })
+  it('should have a custom title and match snapshot', () => {
+    const wrapper = mount(CustomCard, {
+      localVue,
+      vuetify,
+      propsData: {
+        title: 'Foobar',
+      
+},
+    })
 
-  //   // With jest we can create snapshot files of the HTML output
-  //   expect(wrapper.html()).toMatchSnapshot()
+    // With jest we can create snapshot files of the HTML output
+    expect(wrapper.html()).toMatchSnapshot()
 
-  //   // We could also verify this differently
-  //   // by checking the text content
-  //   const title = wrapper.find('.v-card__title > span')
+    // We could also verify this differently
+    // by checking the text content
+    const title = wrapper.find('.v-card__title > span')
 
-  //   expect(title.text()).toBe('Foobar')
-  // })
+    expect(title.text()).toBe('Foobar')
+  })
 
   it('should emit an event when the action v-btn is clicked', () => {
     const wrapper = mount(CustomCard, {
