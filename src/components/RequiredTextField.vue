@@ -7,7 +7,7 @@ export default Vue.extend({
     name: 'RequiredTextField',
     data: () => ({
         requiredRules: [
-           v => (!!v && v.length > 0) || 'Name is required',
+           (v: string) => (!!v && v.length > 0) || 'Name is required',
        ]
     })
 })
